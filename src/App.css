@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-yitro-bg text-yitro-text;
+}
+
+@theme {
+  --color-yitro-dark: #009B77;
+  --color-yitro-light: #00b4d8;
+  --color-yitro-accent: #2176ff;
+  --color-yitro-light-accent: #4A90E2;
+  --color-yitro-cta: #ecba3f;
+  --color-yitro-text: #F5F8FA;
+  --color-yitro-bg: #121826;
+}
