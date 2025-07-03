@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaRobot, FaShoppingCart, FaSignOutAlt, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import { HiMenu } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const Header = ({user, cartCount}) => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ const Header = ({user, cartCount}) => {
 	};
 
 	return (
+		
 		<nav className="fixed w-full z-50 gradient-bg shadow-lg backdrop-blur-2xl ">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
@@ -24,8 +26,8 @@ const Header = ({user, cartCount}) => {
 							<div className="ml-10 flex items-baseline space-x-4">
 								<a href="#home" className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yitro-cta transition">Accueil</a>
 								<a href="#features" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Fonctionnalités</a>
-								<a href="/catalogue" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Marketplace</a>
-								<a href="#agents" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Nos Agents</a>
+								<Link to="/marketplace" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Marketplace</Link>
+								<a href="/#agents" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Nos Agents</a>
 								<a href="#pricing" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Tarifs</a>
 								<a href="#contact" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-yitro-cta transition">Contact</a>
 							</div>
@@ -82,7 +84,7 @@ const Header = ({user, cartCount}) => {
 					<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 						<a href="#home" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yitro-cta transition">Accueil</a>
 						<a href="#features" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white transition">Fonctionnalités</a>
-						<a href="/catalogue" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white transition">Marketplace</a>
+						<Link to="/marketplace" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white transition">Marketplace</Link>
 						<a href="/cart" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white transition">Panier {
 							cartCount > 0 && `(${cartCount})`
 						}</a>
